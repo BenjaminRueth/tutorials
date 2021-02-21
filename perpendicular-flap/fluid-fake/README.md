@@ -32,6 +32,8 @@ and
 
 ![](flap_fenics.png)
 
+Obtained results using FEniCS-adapter bf1df45624dfea4c5d0d72a9fa4a1755578b7420, branch develop.
+
 # Use CalculiX as Solid:
 
 Run
@@ -48,7 +50,9 @@ and
 
 ![](flap_ccx.png)
 
+Obtained results using CalculiX-adapter 63af15333c8d5f3ba85fdec28ec35042cb2691e2, branch handle2DInterfaces.
+
 # Some Observations
 
 * Frequency for CalculiX is slightly higher
-* Amplitude for FEnICS is slightly higher
+* Amplitude for FEniCS is slightly higher
