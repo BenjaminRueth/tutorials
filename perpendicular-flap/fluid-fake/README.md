@@ -50,7 +50,7 @@ and
 
 ![](flap_ccx.png)
 
-Obtained results using CalculiX-adapter 63af15333c8d5f3ba85fdec28ec35042cb2691e2, branch handle2DInterfaces.
+Obtained results using CalculiX-adapter 4635aa87439d154269d7f6141e8684a733f3e68f, branch develop.
 
 # Some Observations
 
