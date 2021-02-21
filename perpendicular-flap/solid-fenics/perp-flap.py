@@ -170,8 +170,10 @@ t = 0.0
 n = 0
 time = []
 u_tip = []
+v_tip = []
 time.append(0.0)
 u_tip.append(0.0)
+v_tip.append(0.0)
 E_ext = 0
 
 displacement_out = File("Solid/FSI-S/u_fsi.pvd")
@@ -227,15 +229,20 @@ while precice.is_coupling_ongoing():
         if n % 10 == 0:
             displacement_out << (u_n, t)
 
-        u_tip.append(u_n(0., 1.)[0])
+        scale=10
+        u_tip.append(u_n(0.-W/2, 1.)[0])
+        v_tip.append(u_n(0.-W/2, 1.)[1]*scale)
         time.append(t)
 
 # Plot tip displacement evolution
 displacement_out << u_n
 plt.figure()
 plt.plot(time, u_tip)
+plt.plot(time, v_tip)
+plt.title("Solid")
 plt.xlabel("Time")
 plt.ylabel("Tip displacement")
+plt.legend(["x", "y * {}".format(scale)])
 plt.show()
 
 precice.finalize()
